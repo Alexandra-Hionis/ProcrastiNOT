@@ -1,0 +1,23 @@
+{
+  "name": "procrastinot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:js && npm run watch:js & npm run watch:scss & npm run server",
+    "build:js": "webpack",
+    "watch:js": "nodemon --exec \"npm run build:js\" --watch ./assets/js",
+    "watch:scss": "sass --watch ./assets/styles/main.scss:./assets/styles/main.css",
+    "server": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.2",
+    "node": "^20.2.0",
+    "nodemon": "^2.0.22",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1"
+  }
+}
