@@ -1,4 +1,15 @@
 body{
     background: rgb(203,159,242);
-background: radial-gradient(circle, rgba(203,159,242,1) 0%, rgba(153,193,240,1) 78%);
+    background: radial-gradient(circle, rgba(203,159,242,1) 0%, rgba(153,193,240,1) 78%);
+}
+// Typography
+h1 {
+    font-family: $poppins;
+    font-weight: $poppins-semibold;
+    text-align: center;
+
+  }
+p{
+    font-family: $poppins;
+    font-weight: $poppins-regular;
 }
