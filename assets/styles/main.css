@@ -1,17 +1,93 @@
 body {
   background: rgb(203, 159, 242);
   background: radial-gradient(circle, rgb(203, 159, 242) 0%, rgb(153, 193, 240) 78%);
+  padding: 0 30px;
 }
 
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
+  font-size: clamp(25px, 2vw, 75px);
 }
 
 p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.new-todo-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 20px;
+}
+
+button {
+  animation: border-color-change 3s infinite alternate;
+  border: #A2BBF0 solid 2px;
+  background: #1E212F;
+  cursor: pointer;
+}
+
+.check-wrapper, .plus-wrapper {
+  fill: #fff;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+}
+.check-wrapper svg, .plus-wrapper svg {
+  width: 20px;
+  height: 20px;
+}
+
+.check-wrapper--headline {
+  cursor: auto;
+}
+.check-wrapper:hover {
+  animation: none;
+  filter: none;
+}
+
+.plus-wrapper {
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  min-height: 80px;
+}
+.plus-wrapper svg {
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes border-color-change {
+  0% {
+    border-color: #A2BBF0;
+  }
+  25% {
+    border-color: #77BAB5;
+  }
+  50% {
+    border-color: #ED9966;
+  }
+  75% {
+    border-color: #D55E7A;
+  }
+  100% {
+    border-color: #EDD581;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
