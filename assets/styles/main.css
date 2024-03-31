@@ -59,7 +59,7 @@ p {
   min-height: 40px;
   border-radius: 50%;
 }
-.check-wrapper svg, .plus-wrapper svg {
+.check-wrapper img, .plus-wrapper img {
   width: 20px;
   height: 20px;
 }
@@ -95,7 +95,7 @@ p {
   height: 80px;
   min-height: 80px;
 }
-.plus-wrapper svg {
+.plus-wrapper img {
   width: 25px;
   height: 25px;
 }
