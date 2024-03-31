@@ -15,9 +15,34 @@
     <title>ProcrastiNOT</title>
   </head>
   <body>
-    <!-- headline -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>New Todo</h2>
+        <form action="">
+          <input
+            type="text"
+            id="todo-input"
+            name="todo-input"
+            placeholder="Ex: Get Groceries"
+          />
+          <button
+            class="button button--modal"
+            type="submit"
+            value="Submit"
+            id="submit-todo-button"
+          >
+            Add
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- End The Modal -->
+    <!-- Headline -->
     <div class="headline">
-      <button class="check-wrapper check-wrapper--headline">
+      <button class="button check-wrapper check-wrapper--headline">
         <svg width="60" viewBox="0 0 45 44.999999" height="60">
           <path
             fill="#ffff"
@@ -29,25 +54,17 @@
       </button>
       <h1>ProcrastiNOT</h1>
     </div>
-    <!-- end headline -->
+    <!-- End Headline -->
     <!-- No todos -->
     <div id="no-todos">
       <h2>No Todos Added</h2>
     </div>
-    <!--end No todos -->
+    <!--End No todos -->
 
-    <!-- new todo -->
+    <!-- New todo -->
     <div class="new-todo-container">
-      <button class="plus-wrapper">
+      <button class="button plus-wrapper" id="todo-modal">
         <svg width="60" viewBox="0 0 45 44.999999" height="60">
-          <!-- <defs>
-            <clipPath id="b38c494050">
-              <path
-                d="M 3.074219 3.074219 L 42.074219 3.074219 L 42.074219 42.074219 L 3.074219 42.074219 Z M 3.074219 3.074219 "
-                clip-rule="nonzero"
-              />
-            </clipPath>
-          </defs> -->
           <g clip-path="url(#b38c494050)">
             <path
               fill="#fff"
@@ -58,7 +75,8 @@
           </g>
         </svg>
       </button>
-      <!-- end new todo -->
+      <!-- End New todo -->
     </div>
+    <script type="text/javascript" src="dist/js/bundle.js"></script>
   </body>
 </html>

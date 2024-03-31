@@ -1,8 +1,12 @@
-button{
+.button{
     animation: border-color-change 3s infinite alternate;
     border: #A2BBF0 solid 2px;
     background: $black;
     cursor: pointer;
+    &--modal{
+        border-radius: 0 8px 8px 0;
+        padding: 0 20px;
+    }
 }
 
 .check-wrapper, .plus-wrapper {
