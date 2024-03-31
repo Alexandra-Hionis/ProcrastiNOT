@@ -2,17 +2,16 @@ body {
   background: rgb(203, 159, 242);
   background: radial-gradient(circle, rgb(203, 159, 242) 0%, rgb(153, 193, 240) 78%);
   padding: 0 30px;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
   font-size: clamp(25px, 2vw, 75px);
 }
 
 h2 {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-align: center;
   font-size: clamp(18px, 1.5vw, 55px);
@@ -20,7 +19,6 @@ h2 {
 }
 
 p {
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
@@ -185,6 +183,19 @@ form {
 
 #todo-input:focus {
   outline: none;
+}
+
+.todos-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.todo-item {
+  background: rgba(253, 252, 252, 0.2);
+  border: 1px solid #616895;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

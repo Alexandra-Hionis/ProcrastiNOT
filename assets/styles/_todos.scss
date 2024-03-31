@@ -1,0 +1,12 @@
+.todos-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.todo-item {
+    background: $frosted;
+    border: 1px solid $gray;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+}

@@ -1,11 +1,14 @@
 // Get the modal
-var modal = document.getElementById("myModal");
+const modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var newTodoModalBtn = document.getElementById("todo-modal");
+const newTodoModalBtn = document.getElementById("todo-modal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const span = document.getElementsByClassName("close")[0];
+
+// Get add/submit new todo button
+const submitTodoBtn = document.getElementById("submit-todo-button");
 
 // When the user clicks on the button, open the modal
 newTodoModalBtn.onclick = function () {
@@ -22,4 +25,9 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+};
+
+// When the user clicks on the button, close the modal
+submitTodoBtn.onclick = function () {
+  modal.style.display = "none";
 };

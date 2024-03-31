@@ -2,23 +2,21 @@ body{
     background: rgb(203,159,242);
     background: radial-gradient(circle, rgba(203,159,242,1) 0%, rgba(153,193,240,1) 78%);
     padding: 0 30px;
+    font-family: $poppins;
 }
 // Typography
 h1 {
-    font-family: $poppins;
     font-weight: $poppins-semibold;
     text-align: center;
     font-size: clamp(25px, 2vw, 75px);
   }
   h2 {
-    font-family: $poppins;
     font-weight: $poppins-semibold;
     text-align: center;
     font-size: clamp(18px, 1.5vw, 55px);
     color: $gray;
   }
 p{
-    font-family: $poppins;
     font-weight: $poppins-regular;
 }
 
