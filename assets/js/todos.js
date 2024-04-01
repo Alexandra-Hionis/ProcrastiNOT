@@ -34,13 +34,13 @@ todoSubmitBtn.addEventListener("click", (e) => {
     feedbackMessage.innerText = "";
     // Enable the todoSubmitBtn button
     todoSubmitBtn.disabled = false;
-    // Call addTodo only if the input is not empty
-    addTodo();
+    // Call createTodo only if the input is not empty
+    createTodo();
   }
   console.log(input.value);
 });
 
-function addTodo() {
+function createTodo() {
   // Get the input value
   const inputValue = input.value.trim();
 
@@ -72,3 +72,9 @@ function addTodo() {
     noTodos.style.display = "none";
   }
 }
+
+let acceptData = () => {
+  // Other codes are here
+
+  createPost();
+};
