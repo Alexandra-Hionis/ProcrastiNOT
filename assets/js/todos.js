@@ -53,8 +53,10 @@ function addTodo() {
     // Create the HTML for todo item with edit and delete buttons
     todoItem.innerHTML = `
       <span>${inputValue}</span>
-      <button class="edit-button">Edit</button>
-      <button class="delete-button">Delete</button>
+      <div class="button-options-container">
+      <button class="button edit-button">Edit</button>
+      <button class="button delete-button">Delete</button>
+      </div>
     `;
 
     // Get the container where todos will be added

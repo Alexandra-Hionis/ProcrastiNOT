@@ -44,6 +44,9 @@ p {
   border: #A2BBF0 solid 2px;
   background: #1E212F;
   cursor: pointer;
+  color: #F9F5FC;
+  border-radius: 8px;
+  padding: 10px 15px;
 }
 .button--modal {
   border-radius: 0 8px 8px 0;
@@ -196,6 +199,9 @@ form {
   border-radius: 8px;
   padding: 20px;
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

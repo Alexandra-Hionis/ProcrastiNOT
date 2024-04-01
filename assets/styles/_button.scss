@@ -3,6 +3,10 @@
     border: #A2BBF0 solid 2px;
     background: $black;
     cursor: pointer;
+    color: $white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    
     &--modal{
         border-radius: 0 8px 8px 0;
         padding: 0 20px;
