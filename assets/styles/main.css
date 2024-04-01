@@ -59,6 +59,7 @@ p {
   height: 40px;
   min-height: 40px;
   border-radius: 50%;
+  padding: 0;
 }
 .check-wrapper img, .plus-wrapper img {
   width: 20px;
