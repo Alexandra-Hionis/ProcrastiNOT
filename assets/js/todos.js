@@ -24,19 +24,8 @@ input.addEventListener("input", validateInputField);
 
 todoSubmitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  if (input.value === "") {
-    // Disable the todoSubmitBtn button
-    todoSubmitBtn.disabled = true;
-    // Update feedbackMessage innerText
-    feedbackMessage.innerText = "Please enter a todo";
-  } else {
-    // Clear the feedback message
-    feedbackMessage.innerText = "";
-    // Enable the todoSubmitBtn button
-    todoSubmitBtn.disabled = false;
-    // Call createTodo only if the input is not empty
-    createTodo();
-  }
+  validateInputField();
+  createTodo();
   console.log(input.value);
 });
 
@@ -73,8 +62,4 @@ function createTodo() {
   }
 }
 
-let acceptData = () => {
-  // Other codes are here
-
-  createPost();
-};
+// Store data from input field into object
