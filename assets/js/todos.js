@@ -2,10 +2,42 @@
 let form = document.getElementById("form");
 let input = document.getElementById("todo-input");
 const todoSubmitBtn = document.getElementById("submit-todo-button");
+const noTodos = document.getElementById("no-todos");
+const feedbackMessage = document.getElementById("feedback-message");
+
+// Validate the input field
+function validateInputField() {
+  if (input.value === "") {
+    // Disable the todoSubmitBtn button
+    todoSubmitBtn.disabled = true;
+    // Update feedbackMessage innerText
+    feedbackMessage.innerText = "Please enter a todo";
+  } else {
+    // Clear the feedback message
+    feedbackMessage.innerText = "";
+    // Enable the todoSubmitBtn button
+    todoSubmitBtn.disabled = false;
+  }
+}
+
+input.addEventListener("input", validateInputField);
+
 todoSubmitBtn.addEventListener("click", (e) => {
   e.preventDefault();
+  if (input.value === "") {
+    // Disable the todoSubmitBtn button
+    todoSubmitBtn.disabled = true;
+    // Update feedbackMessage innerText
+    feedbackMessage.innerText = "Please enter a todo";
+  } else {
+    // Clear the feedback message
+    feedbackMessage.innerText = "";
+    // Enable the todoSubmitBtn button
+    todoSubmitBtn.disabled = false;
+    // Call addTodo only if the input is not empty
+    addTodo();
+  }
   console.log(input.value);
-  addTodo();
 });
 
 // Create a new todo item and add it to todos container
@@ -30,4 +62,7 @@ function addTodo() {
 
   // Clear the input field after adding the todo
   input.value = "";
+
+  // Hide noTodos if there are todos
+  noTodos.style.display = "none";
 }

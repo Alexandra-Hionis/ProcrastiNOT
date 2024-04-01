@@ -29,5 +29,9 @@ window.onclick = function (event) {
 
 // When the user clicks on the button, close the modal
 submitTodoBtn.onclick = function () {
-  modal.style.display = "none";
+  let input = document.getElementById("todo-input");
+
+  if (input.value.trim() !== "") {
+    modal.style.display = "none";
+  }
 };

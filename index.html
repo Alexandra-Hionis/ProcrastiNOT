@@ -21,7 +21,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>New Todo</h2>
-        <form action="">
+        <form id="new-todo-form">
           <input
             type="text"
             id="todo-input"
@@ -37,6 +37,7 @@
             Add
           </button>
         </form>
+        <p id="feedback-message"></p>
       </div>
     </div>
     <!-- End The Modal -->
@@ -50,7 +51,7 @@
     <!-- End Headline -->
     <!-- No todos -->
     <div id="no-todos-container">
-      <h2>No Todos Added</h2>
+      <h2 id="no-todos">No Todos Added</h2>
     </div>
     <!--End No todos -->
     <!-- Todos list -->
