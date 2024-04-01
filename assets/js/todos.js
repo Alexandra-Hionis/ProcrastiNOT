@@ -40,29 +40,33 @@ todoSubmitBtn.addEventListener("click", (e) => {
   console.log(input.value);
 });
 
-// Create a new todo item and add it to todos container
 function addTodo() {
-  // Create a new div element
-  const newDiv = document.createElement("div");
+  // Get the input value
+  const inputValue = input.value.trim();
 
-  // Assign class name to the new div
-  newDiv.className = "todo-item";
+  // Check if input value is not empty
+  if (inputValue !== "") {
+    // Create a new todo item container div
+    const todoItem = document.createElement("div");
+    todoItem.className = "todo-item";
 
-  // Create a text node with the input value
-  const newContent = document.createTextNode(input.value);
+    // Create the HTML for todo item with edit and delete buttons
+    todoItem.innerHTML = `
+      <span>${inputValue}</span>
+      <button class="edit-button">Edit</button>
+      <button class="delete-button">Delete</button>
+    `;
 
-  // Append the text node to the new div
-  newDiv.appendChild(newContent);
+    // Get the container where todos will be added
+    const todosContainer = document.querySelector(".todos-container");
 
-  // Get the container where todos will be added
-  const todosContainer = document.querySelector(".todos-container");
+    // Append the new todo item to the todos container
+    todosContainer.appendChild(todoItem);
 
-  // Append the new todo item to the todos container
-  todosContainer.appendChild(newDiv);
+    // Clear the input field after adding the todo
+    input.value = "";
 
-  // Clear the input field after adding the todo
-  input.value = "";
-
-  // Hide noTodos if there are todos
-  noTodos.style.display = "none";
+    // Hide noTodos if there are todos
+    noTodos.style.display = "none";
+  }
 }
