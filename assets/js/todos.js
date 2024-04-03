@@ -5,6 +5,9 @@ const todoSubmitBtn = document.getElementById("submit-todo-button");
 const noTodos = document.getElementById("no-todos");
 const feedbackMessage = document.getElementById("feedback-message");
 
+// Initialize an empty array to store todo items
+let todos = [];
+
 // Validate the input field
 function validateInputField() {
   if (input.value === "") {
@@ -26,12 +29,12 @@ todoSubmitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   validateInputField();
   createTodo();
-  console.log(input.value);
+  saveTodoList();
 });
 
 function createTodo() {
   // Get the input value
-  const inputValue = input.value.trim();
+  let inputValue = input.value.trim();
 
   // Check if input value is not empty
   if (inputValue !== "") {
@@ -54,12 +57,33 @@ function createTodo() {
     // Append the new todo item to the todos container
     todosContainer.appendChild(todoItem);
 
-    // Clear the input field after adding the todo
-    input.value = "";
-
     // Hide noTodos if there are todos
     noTodos.style.display = "none";
+
+    // acceptData(inputValue);
+
+    // Clear the input field after adding the todo
+    input.value = "";
   }
 }
 
-// Store data from input field into object
+function saveTodoList() {
+  let todoItems = [];
+
+  // Get all todo items
+  const todoItemsElements = document.querySelectorAll(".todo-item");
+
+  // Iterate over each todo item
+  todoItemsElements.forEach((todoItemElement) => {
+    let todoItemInfo = {
+      task: todoItemElement.querySelector("span").innerText,
+      // completed: false, // You may add logic here to check if todo is completed
+    };
+
+    // Push todo item info to array
+    todoItems.push(todoItemInfo);
+  });
+
+  // Save todo items to local storage
+  localStorage.setItem("todos", JSON.stringify(todoItems));
+}
